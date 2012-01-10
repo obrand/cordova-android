@@ -58,7 +58,7 @@ public class App extends Plugin {
             	this.clearHistory();
             }
             else if (action.equals("backHistory")) {
-                this.backHistory();
+                this.backHistory(args.getInt(0));
             }
         	else if (action.equals("overrideBackbutton")) {
             	this.overrideBackbutton(args.getBoolean(0));
@@ -165,8 +165,8 @@ public class App extends Plugin {
      * Go to previous page displayed.
      * This is the same as pressing the backbutton on Android device.
      */
-    public void backHistory() {
-        ((DroidGap)this.ctx).backHistory();
+    public void backHistory(int steps) {
+        ((DroidGap)this.ctx).backHistory(steps);
     }
 
     /**

@@ -72,7 +72,15 @@ App.prototype.clearHistory = function() {
  * This is the same as pressing the backbutton on Android device.
  */
 App.prototype.backHistory = function() {
-    PhoneGap.exec(null, null, "App", "backHistory", []);
+    PhoneGap.exec(null, null, "App", "backHistory", [1]);
+};
+
+/**
+ * Go to a specified nb previous page displayed.
+ * This is the same as pressing the backbutton on Android device.
+ */
+App.prototype.backMultipleHistory = function(steps) {
+    PhoneGap.exec(null, null, "App", "backHistory", [steps]);
 };
 
 /**
